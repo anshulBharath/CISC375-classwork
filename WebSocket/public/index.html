@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            WebSocket Example
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script type="application/javascript">
+            let ws;
+            let app;
+            
+            function init() {
+                console.log(window.location.host);
+                ws = new webSocket('ws://' + window.location.host);
+                ws.addEventListener('open', onOpen, false);
+                ws.addEventListener('message', onMessage, false);
+
+                app = new Vue( {
+                    el: '#app',
+                    data: {
+                        message: [],
+                        new_message: ''
+                    }
+                });
+            }
+            function onOpen(event) {
+                console.log(event);
+                ws.send("hello");
+            }
+
+            function onMessage(event) {
+                console.log(event);
+                app.message.push(event.data);
+            }
+
+            function sendMessage() {
+                ws.send(app.new_message);
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app">
+            <input type="text" placeholder="Enter message" v-model:value="new_message"/>
+            <button type="button" onclick="sendMessage()">Send</button>
+            <ul id="message_list">
+                <li v-for="item in messages"> {{ item }}</li>
+            </ul>
+        </div>
+    </body>
+</html>

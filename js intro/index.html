@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Intro</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="application/javascript" src="js/colorPicker.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>JavaScript Intro</h1>
+        <p>Sample page to test Javascript functionality</p>
+
+        <div class="spacer"></div>
+
+        <div class="float_left">
+            <label class="color_label">Red:</label>
+            <input id="red" class="color_slider" type="range" min="0" max="255" step="1" value="0" oninput="changeRed()"/>
+            <span id="red_value" class="color_value" onchange="changeBlock()">0</span>
+            <br/>
+            <label class="color_label">Green:</label>
+            <input id="green" class="color_slider" type="range" min="0" max="255" step="1" value="0" oninput="changeGreen()"/>
+            <span id="green_value" class="color_value" onchange="changeBlock()">0</span>
+            <br/>
+            <label class="color_label">Blue:</label>
+            <input id="blue" class="color_slider" type="range" min="0" max="255" step="1" value="0" oninput="changeBlue()"/>
+            <span id="blue_value" class="color_value" onchange="changeBlock()">0</span>
+            <br/>
+            <p onclick="test()">Touch</p>
+        </div>
+
+        <div id="color" class="float_left"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+html {
+    font-size: 60%;
+}
+
+body {
+    background-color: #fafafa;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    color:blue;
+    background-color:cadetblue;
+    font-family: Monaco;
+}
+
+ul,ol {
+    background-color: #610aec;
+    font-family: "Lucida Console", serif;
+}
+
+h4 {
+    font:italic bold 2rem Arial;
+}
+
+ui li {
+    font-family:"fantasy";
+}
+
+a:hover {
+    color:red;
+}
+
+h4:hover {
+    background-color: rgb(17, 37, 54);
+}
+
+span p {
+    background-color: salmon;
+}
+
+#SpecialTrek {
+    background-color: yellowgreen;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.bikePicture {
+    float: left;
+    width: 500px;
+}
+
+

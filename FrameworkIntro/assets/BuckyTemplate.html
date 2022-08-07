@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en" >
+<![endif]-->
+<html class="no-js" lang="en" >
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>thenewboston</title>
+
+	<!-- normalize.css and modernizr.js help with browser compatibility -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/foundation.css">
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+    <div class="grid-container">
+
+		<!--Inner grid div represents row-->
+        <div class="grid-x grid-padding-x">
+			<!--These represent columns-->	
+			<div class="cell large-4" style="background-color:aqua">4</div>
+        	<div class="cell large-4" style="background-color:green">6</div>
+        	<div class="cell large-4" style="background-color:salmon">2</div>
+		</div>
+	</div>
+
+	<div class="grid-container">
+		<!--Inner grid div represents row-->
+        <div class="grid-x grid-padding-x">
+			<!--These represent columns-->	
+			<div class="cell large-4" style="background-color:aqua">4</div>
+        	<div class="cell large-4" style="background-color:green">6</div>
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-2" style="background-color:yellow">4</div>
+        			<div class="cell large-2" style="background-color:tomato">6</div>
+				</div>
+			</div>
+        	<div class="cell large-2" style="background-color:salmon">2</div>
+		</div>
+	</div>
+	<br/>
+	<br>
+
+	<!--
+		small = mobile
+		medium = tablets
+		larger = desktop
+	-->
+	<div class="grid-x">
+		<div class="large-2 cell" style="background-color: salmon;">left</div>
+		<div class="small-6 large-10 cell" style="background-color: blue;">right</div>
+	</div>
+
+<!-- include before </body> tag -->
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+	$(document).foundation();
+</script>
+</body>
+</html>
